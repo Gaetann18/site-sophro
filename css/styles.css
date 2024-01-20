@@ -66,14 +66,14 @@ blockquote {
 
 .tm-btn-primary { 
   color: rgb(255, 255, 255);
-  background-color: #369;
+  background-color: #bb28af;
   padding: 14px 30px;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
   color: white;
-  background-color: #38B;
+  background-color: #bb28af;
 }
 
 /* Navbar */
@@ -274,7 +274,7 @@ blockquote {
 
 .tm-icon {
   display: block;
-  color: #37A;
+  color: #bb28af;
 }
 
 .tm-continue {
@@ -373,7 +373,7 @@ blockquote {
 .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #3ba0dd;
+  color: #bb28af;
 }
 
 .tm-forwhat-carousel .slick-dots li button:before {
@@ -398,7 +398,7 @@ blockquote {
   position: relative;
   float: left;
   overflow: hidden;
-  background: #3085a3;
+  background: #bb28af;
   text-align: center;
   cursor: pointer;
 }
@@ -565,7 +565,7 @@ figure.effect-honey:hover h2 i {
 
 .item-link:hover i,
 .item-link:hover span {
-  color: #3496d8;
+  color: #bb28af;
 }
 
 .tm-input {
@@ -581,14 +581,14 @@ figure.effect-honey:hover h2 i {
 .tm-btn-submit {
 	font-size: 0.9em;
 	color: #fff;
-	background-color: #369;
+	background-color: #bb28af;
 	width: 50%;
 	margin-bottom: 60px;
 }
 
 .tm-btn-submit:hover {
 	color: #fff;
-	background-color: #38B;
+	background-color: #3d0939;
 }
 
 ::placeholder {
@@ -629,7 +629,7 @@ figure.effect-honey:hover h2 i {
 
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-  color: #38B;
+  color: #bb28af;
   text-decoration: none;
 }
 
