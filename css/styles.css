@@ -26,7 +26,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #D40;
+  color: rgb(7, 0, 105);
 }
 
 a:focus {
@@ -57,7 +57,7 @@ blockquote {
 }
 
 .tm-text-primary {
-  color: #bb28af;
+  color: #38B;
 }
 
 .tm-font-big {
@@ -66,14 +66,14 @@ blockquote {
 
 .tm-btn-primary { 
   color: rgb(255, 255, 255);
-  background-color: #bb28af;
+  background-color: #38B;
   padding: 14px 30px;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
   color: white;
-  background-color: #bb28af;
+  background-color: #38B;
 }
 
 /* Navbar */
@@ -87,24 +87,24 @@ blockquote {
 }
 
 .tm-navbar.scroll {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #e9ecef;
 }
 
 .navbar-brand {
   font-family: "Allura", cursive;
-  color: #bb28af;
+  color: #38B;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #bb28af;
+  color: #38B;
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: #bb28af;
+  color: #38B;
 }
 
 .nav-item {
@@ -113,18 +113,18 @@ blockquote {
 
 .tm-nav-link {
   font-family: "Allura", cursive;
-  color: #bb28af;
+  color: rgb(0, 3, 155);
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: rgb(153, 15, 61);
+  color: rgb(12, 15, 187);
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
 .tm-navbar.scroll .tm-nav-link.current,
 .tm-nav-link:hover {
-  color: #6b0e0e;
-  background-color: rgb(255, 209, 220);;
+  color: #0644a1;
+  background-color: rgba(23, 165, 201, 0.39);;
 }
 
 .navbar-toggler {
@@ -202,7 +202,10 @@ blockquote {
 
 .tm-logo {
  padding: 10px;
+ width: 250px;
+ height: auto;
 }
+
 .tm-hero-title {
   font-family: "Allura", cursive;
   font-size: 4rem;
@@ -212,11 +215,28 @@ blockquote {
 
 .tm-hero-subtitle {
   text-shadow: 2px 2px 2px #333;
-  text-align: center; 
+  text-align: center;
   padding: 20px;
-  margin-inline: 500px;
+  margin: 0 auto; 
+  max-width: 1500px; 
   text-align: justify;
 }
+
+@media (max-width: 768px) {
+  .tm-hero-subtitle {
+      padding: 10px;
+      font-size: 0.9rem; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .tm-hero-subtitle {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
 
 .tm-intro-next {
   position: absolute;
@@ -243,7 +263,7 @@ blockquote {
 .tm-down-arrow {
   	color: #FFF;
     cursor: pointer;
-    background: rgb(114, 12, 60);
+    background: rgba(31, 180, 206, 0.37);
     padding: 15px 40px;
     transition: all 0.3s ease;
 }
@@ -251,7 +271,7 @@ blockquote {
 .tm-down-arrow:hover,
 .tm-down-arrow:focus {
   color: #FFF;
-  background: rgb(198, 13, 204);
+  background: rgba(31, 63, 206, 0.801);
   padding: 20px 50px;
 }
 
@@ -274,7 +294,7 @@ blockquote {
 
 .tm-icon {
   display: block;
-  color: #bb28af;
+  color: #38B;
 }
 
 .tm-continue {
@@ -343,7 +363,7 @@ blockquote {
   text-align: justify;
 }
 .tm-section-desc {
-  color: rgb(198, 13, 204);
+  color: rgb(42, 13, 204);
   text-shadow: 2 2px 2 rgba(0, 0, 0, 0.5);
   max-width: 400;
   width: 100%;
@@ -372,7 +392,7 @@ blockquote {
 .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #bb28af;
+  color: #38B;
 }
 
 .tm-forwhat-carousel .slick-dots li button:before {
@@ -397,7 +417,7 @@ blockquote {
   position: relative;
   float: left;
   overflow: hidden;
-  background: #bb28af;
+  background: #38B;
   text-align: center;
   cursor: pointer;
 }
@@ -468,7 +488,7 @@ blockquote {
 /*---------------*/
 
 figure.effect-honey {
-  background: #4a3753;
+  background: #77c3e64b;
   max-width: 220px;
 }
 
@@ -488,7 +508,7 @@ figure.effect-honey figcaption::before {
   left: 0;
   width: 100%;
   height: 10px;
-  background: rgb(148, 10, 141);
+  background: rgb(24, 10, 148);
   content: "";
   -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
@@ -536,14 +556,25 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-color: hwb(346 60% 10%);
-  background-image: url(../img/home-loop-03.jpg);
+  position: relative;
+  background: url('/img/footer_background.jpg') fixed;
+  background-size: cover;
   background-position: center;
+  background-color: hwb(346 60% 10%);
   background-repeat: no-repeat;
   min-height: 980px;
   position: relative;
   padding-bottom: 50px;
   padding-top: 100px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 28, 117, 0.342);
 }
 
 .contact-item {
@@ -564,7 +595,7 @@ figure.effect-honey:hover h2 i {
 
 .item-link:hover i,
 .item-link:hover span {
-  color: #bb28af;
+  color: #38B;
 }
 
 .tm-input {
@@ -580,7 +611,7 @@ figure.effect-honey:hover h2 i {
 .tm-btn-submit {
 	font-size: 0.9em;
 	color: #fff;
-	background-color: #bb28af;
+	background-color: #38B;
 	width: 50%;
 	margin-bottom: 60px;
 }
@@ -625,10 +656,16 @@ figure.effect-honey:hover h2 i {
 .tm-footer-link {
   color: white;
 }
-
+.tm-footer-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px; 
+  height: auto; 
+}
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-  color: #bb28af;
+  color: #38B;
   text-decoration: none;
 }
 
