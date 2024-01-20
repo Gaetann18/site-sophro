@@ -1,5 +1,5 @@
 /*
-
+tm-section-desc
 Tooplate 2117 home Loop
 
 https://www.tooplate.com/view/2117-home-loop
@@ -335,9 +335,16 @@ blockquote {
 }
 
 /* Work */
-
+.tm-section-desc1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2 2px 2 rgba(0, 0, 0, 0.5);
+  max-width: 400;
+  width: 100%;
+  font-size: 1rem;
+  text-align: justify;
+}
 .tm-section-desc {
-  color: #ffffff;
+  color: rgb(198, 13, 204);
   text-shadow: 2 2px 2 rgba(0, 0, 0, 0.5);
   max-width: 400;
   width: 100%;
@@ -482,7 +489,7 @@ figure.effect-honey figcaption::before {
   left: 0;
   width: 100%;
   height: 10px;
-  background: #38C;
+  background: rgb(148, 10, 141);
   content: "";
   -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
@@ -530,7 +537,7 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-color: #001828;
+  background-color: hwb(346 60% 10%);
   background-image: url(../img/home-loop-03.jpg);
   background-position: center;
   background-repeat: no-repeat;
