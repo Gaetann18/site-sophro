@@ -310,14 +310,13 @@ blockquote {
 }
 
 .tm-forwhat-carousel {
-  max-width: 1050px;
   margin: 0 auto;
 }
 
 .tm-forwhat-item {
   max-width: 290px;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .tm-forwhat-item img {
