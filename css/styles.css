@@ -304,7 +304,7 @@ blockquote {
 /* forwhat */
 #forwhat {
   color: rgb(255, 255, 255);
-  background-image: url(img/forwhat-background.jpeg);
+  background-image: url(../img/forwhat-background.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -557,7 +557,7 @@ figure.effect-honey:hover h2 i {
 #contact {
   color: white;
   position: relative;
-  background: url('img/footer_background.jpg') fixed;
+  background: url('../img/footer_background.jpg') fixed;
   background-size: cover;
   background-position: center;
   background-color: hwb(346 60% 10%);
