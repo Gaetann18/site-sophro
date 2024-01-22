@@ -139,6 +139,12 @@ blockquote {
   color: #707070;
 }
 
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.5rem; /* ajustez la taille selon vos besoins */
+  }
+}
+
 /* Hero */
 
 #home {
@@ -205,7 +211,13 @@ blockquote {
   text-shadow: 2px 2px 2px #333;
   text-align: center;
 }
-
+@media (max-width: 768px) {
+  .tm-hero-title {
+      padding: -10px;
+      font-size: 2rem; 
+      opacity: 0%;
+  }
+}
 .tm-hero-subtitle {
   text-shadow: 2px 2px 2px #333;
   text-align: center;
@@ -217,7 +229,7 @@ blockquote {
 
 @media (max-width: 768px) {
   .tm-hero-subtitle {
-      padding: 10px;
+      padding: -10px;
       font-size: 0.9rem; 
   }
 }
@@ -248,6 +260,7 @@ blockquote {
   }
 }
 
+/* Arrow */
 .tm-down-arrow-link {
   display: block;
   margin-top: 18%;
@@ -267,6 +280,16 @@ blockquote {
   background: rgba(31, 63, 206, 0.801);
   padding: 20px 50px;
 }
+
+@media screen and (max-width: 767px) {
+  .tm-down-arrow-link {
+    position: absolute;
+    bottom: -80px; /* Ajustez cette valeur selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 
 /* Introduction */
 
@@ -323,7 +346,7 @@ blockquote {
 }
 
 .tm-forwhat-carousel {
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .tm-forwhat-item {
@@ -345,6 +368,60 @@ blockquote {
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.tm-forwhat-carousel .slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+}
+
+.tm-forwhat-carousel .slick-dots li button:hover:before,
+.tm-forwhat-carousel .slick-dots li button:focus:before,
+.tm-forwhat-carousel .slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+.slick-dots {
+  bottom: -65px;
+}
+
+.slick-dots li {
+  margin: 0 13px;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #38B;
+}
+
+
+.slick-dots li button:before {
+  font-size: 18px;
+}
+
+/* Pour les écrans jusqu'à 767px de large (téléphones et tablettes) */
+@media screen and (max-width: 767px) {
+  .tm-forwhat-item {
+    flex: 0 0 auto;
+    margin-left: 25px;
+    margin-right: 29px;
+  }
+
+  /* Rétablir l'affichage des dots sur les écrans mobiles */
+  .slick-dots {
+    display: block !important;
+  }
+}
+
+/* Pour les écrans de 768px de large (ordinateurs) et plus grands */
+@media screen and (min-width: 768px) {
+  /* Masquer les dots sur les écrans plus larges */
+  .slick-dots {
+    display: none !important;
+  }
+}
+
 
 /* Work */
 .tm-section-desc1 {
@@ -373,36 +450,6 @@ blockquote {
   margin: 0 15px;
 }
 
-.slick-dots {
-  bottom: -65px;
-}
-
-.slick-dots li {
-  margin: 0 13px;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before,
-.slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #38B;
-}
-
-.tm-forwhat-carousel .slick-dots li button:before {
-  color: white;
-  opacity: 0.5;
-}
-
-.tm-forwhat-carousel .slick-dots li button:hover:before,
-.tm-forwhat-carousel .slick-dots li button:focus:before,
-.tm-forwhat-carousel .slick-dots li.slick-active button:before {
-  color: white;
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  font-size: 18px;
-}
 
 /* Hover Effect */
 /* Common style */
@@ -636,6 +683,7 @@ figure.effect-honey:hover h2 i {
   left: 0;
   right: 0;
   padding: 0 15px;
+  margin-bottom: 10px;
 }
 
 .tm-footer a {
@@ -659,6 +707,7 @@ figure.effect-honey:hover h2 i {
   background: url('../img/logo-sophro.png') no-repeat center center;
   background-size: contain; 
   background-color: white;
+  z-index: 1500;
 }
 
 .tm-footer-logo {
@@ -761,6 +810,7 @@ p {
     margin: 0;
   }
 }
+
 
 /* Hover ado */
 .custom-tooltip {
