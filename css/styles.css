@@ -306,7 +306,7 @@ blockquote {
 .tm-intro-text {
   font-size: 1.2rem;
   text-align: justify;
-  color: #06427a8f;
+  color: #000000;
 }
 
 .tm-icon {
@@ -445,12 +445,12 @@ blockquote {
   text-align: justify;
 }
 .tm-section-desc {
-  color: #06427a8f;
   text-shadow: 2 2px 2 rgba(0, 0, 0, 0.5);
   max-width: 400;
   width: 100%;
   font-size: 1.1rem;
   text-align: justify;
+  color: #000000;
 }
 
 .tm-gallery-container {
