@@ -219,12 +219,16 @@ blockquote {
   }
 }
 .tm-hero-subtitle {
-  text-shadow: 2px 2px 2px #333;
+  font-family: Allura;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #000000;
+  text-shadow: 5px 5px 5px #ffffff;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   margin: 0 auto; 
   max-width: 1500px; 
-  text-align: justify;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
