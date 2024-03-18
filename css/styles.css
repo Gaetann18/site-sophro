@@ -460,9 +460,11 @@ blockquote {
 .tm-gallery-container {
   padding-top: 70px;
   padding-bottom: 120px;
+  max-width: 1320px;
 }
 
 .tm-gallery-item {
+  max-width: calc(16.666% - 20px);
   margin: 0 15px;
 }
 
