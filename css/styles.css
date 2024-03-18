@@ -219,11 +219,11 @@ blockquote {
   }
 }
 .tm-hero-subtitle {
-  font-family: Allura;
-  font-weight: 100;
+  font-family: "Allura", cursive;
+  font-weight: bold;
   font-size: 2rem;
-  color: #000000;
-  text-shadow: 5px 5px 5px #ffffff;
+  color:  #38B;
+  text-shadow: 3px 3px 3px #ffffff;
   text-align: center;
   padding: 30px;
   margin: 0 auto; 
@@ -233,18 +233,13 @@ blockquote {
 
 @media (max-width: 768px) {
   .tm-hero-subtitle {
-      padding: -10px;
-      font-size: 0.9rem; 
+      padding: -20px;
+      font-size: 2.2rem;
+      line-height: 1.5;
+      text-align: center;
   }
 }
 
-
-@media (max-width: 768px) {
-  .tm-hero-subtitle {
-      padding: 10px;
-      font-size: 0.9rem;
-  }
-}
 
 
 .tm-intro-next {
