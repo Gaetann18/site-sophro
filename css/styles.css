@@ -53,6 +53,10 @@ blockquote {
   color: #38B;
 }
 
+.tm-text-secondary {
+  color: rgb(79, 143, 182);
+}
+
 .tm-font-big {
   font-size: 1.25rem;
 }
@@ -146,18 +150,6 @@ blockquote {
 }
 
 /* Hero */
-
-#home::before {
-  content: "";
-  position: absolute;
-  left: 10%;
-  width: 100%; /* Largeur de l'élément parent */
-  height: 100%; /* Hauteur de l'élément parent */
-  background-image: url('../img/nuage.png'); /* Chemin vers l'image de nuage */
-  background-size: contain; /* Ajuste la taille de l'image pour qu'elle soit entièrement visible */
-  background-repeat: no-repeat; /* Empêche l'image de se répéter */
-  opacity: 0.6; /* Réglage de l'opacité de l'image pour qu'elle soit semi-transparente */
-}
 
 #home {
 	background-color: #000000;
@@ -330,6 +322,10 @@ blockquote {
 .tm-section-title {
   color: #06427a8f;
   font-size: 2.6rem;
+  font-weight: normal;
+}
+.tm-soussection-title {
+  font-size: 1.4rem;
   font-weight: normal;
 }
 
@@ -882,4 +878,32 @@ p {
 .custom-tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+
+/* accompagnement parents */
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.separation-image {
+  width: 100%;
+  height: 50%;
+  opacity: 5%;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+#accparents .row:last-child img {
+  height: calc(12 * 100% / 12); /* Calcul de la hauteur en fonction des lignes */
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas de son conteneur */
 }
