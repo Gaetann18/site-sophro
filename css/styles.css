@@ -147,18 +147,6 @@ blockquote {
 
 /* Hero */
 
-#home::before {
-  content: "";
-  position: absolute;
-  left: 10%;
-  width: 100%; /* Largeur de l'élément parent */
-  height: 100%; /* Hauteur de l'élément parent */
-  background-image: url('../img/nuage.png'); /* Chemin vers l'image de nuage */
-  background-size: contain; /* Ajuste la taille de l'image pour qu'elle soit entièrement visible */
-  background-repeat: no-repeat; /* Empêche l'image de se répéter */
-  opacity: 0.6; /* Réglage de l'opacité de l'image pour qu'elle soit semi-transparente */
-}
-
 #home {
 	background-color: #000000;
   background-image: url(../img/backgroud.jpg);
