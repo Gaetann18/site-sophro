@@ -2,15 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
-
-@font-face {
-  font-family: 'bird';
-  src: url('/fontawesome-5.5/webfonts/birds.ttf') format('truetype');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
 
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: "Slabo 27px", serif;
 	font-size: 1.2em;
   color: #707070;
   margin: 0;
@@ -56,10 +52,12 @@ blockquote {
 }
 
 .tm-text-primary {
+  font-family: "Dancing Script", cursive;
   color: #38B;
 }
 
 .tm-text-secondary {
+  font-family: "Dancing Script", cursive;
   color: rgb(79, 143, 182);
 }
 
@@ -95,7 +93,7 @@ blockquote {
 }
 
 .navbar-brand {
-  font-family: "Allura", cursive;
+  font-family: "Dancing Script", cursive;
   color: #38B;
   font-size: 2.5rem;
   font-weight: bold;
@@ -115,7 +113,7 @@ blockquote {
 }
 
 .tm-nav-link {
-  font-family: "Allura", cursive;
+  font-family: "Dancing Script", cursive;
   color: rgb(0, 3, 155);
 }
 
@@ -231,7 +229,7 @@ blockquote {
 }
 
 .tm-hero-title {
-  font-family: "Allura", cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 4rem;
   text-shadow: 2px 2px 2px #333;
   text-align: center;
@@ -245,7 +243,7 @@ blockquote {
 }
 .tm-hero-subtitle {
   position: relative;
-  font-family: "bird";
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
   font-size: 2rem;
   color:   rgb(43, 45, 131);
@@ -327,6 +325,7 @@ blockquote {
 }
 
 .tm-section-title {
+  font-family: "Dancing Script", cursive;
   color: #06427a8f;
   font-size: 2.6rem;
   font-weight: normal;
