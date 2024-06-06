@@ -473,7 +473,7 @@ blockquote {
   text-shadow: 2 2px 2 rgba(0, 0, 0, 0.5);
   max-width: 400;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: justify;
 }
 .tm-section-desc {
@@ -486,6 +486,7 @@ blockquote {
 }
 
 .tm-gallery-container {
+  font-size: 1.1rem;
   padding-top: 70px;
   padding-bottom: 120px;
   max-width: 1320px;
