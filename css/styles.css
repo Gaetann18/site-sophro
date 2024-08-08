@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'bird';
-  src: url('/fontawesome-5.5/webfonts/birds.ttf') format('truetype');
+  src: url('../fontawesome-5.5/webfonts/birds.ttf') format('truetype');
 }
 
 
