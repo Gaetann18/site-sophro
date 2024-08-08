@@ -158,8 +158,8 @@ blockquote {
 /* Hero */
 
 #home {
-	background-color: #000000;
-  background-image: url(../img/backgroud.jpg);
+	background-color: #ffffff;
+  background-image: url(../img/enfant-heureux.jpg);
   background-repeat: no-repeat;
   opacity: 1000%;
   height: 100vh;
@@ -248,8 +248,8 @@ blockquote {
   font-family: "bird";
   font-weight: bold;
   font-size: 2rem;
-  color:   rgb(43, 45, 131);
-  text-shadow: 3px 3px 3px #ffffff;
+  color:   #06427a;
+  text-shadow: 1px 1px 10px #ffffff;
   text-align: center;
   padding: 30px;
   margin: 0 auto; 
