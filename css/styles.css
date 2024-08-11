@@ -151,7 +151,7 @@ blockquote {
 
 @media screen and (max-width: 767px) {
   .navbar-brand {
-    font-size: 1.5rem; /* ajustez la taille selon vos besoins */
+    font-size: 1.3rem;
   }
 }
 
@@ -159,12 +159,13 @@ blockquote {
 
 #home {
 	background-color: #ffffff;
-  background-image: url(../img/enfant-heureux.jpg);
+  background-image: url(../img/backgroud.jpg);
   background-repeat: no-repeat;
   opacity: 1000%;
   height: 100vh;
   min-height: 375px;
   position: relative;
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -175,9 +176,7 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; 
     border-radius: 10px; 
-    background-image: none;
   }
 
 }
@@ -202,12 +201,13 @@ blockquote {
 
 @media (min-height: 500px) and (max-height: 679px) {
   #home {
-    background-position: center -400px;
+    background-position: center -100px;
   }
 }
 
 @media (max-height: 499px) {
   #home {
+    background-size: cover;
     background-position: center -450px;
   }
 }
@@ -263,8 +263,9 @@ blockquote {
   .tm-hero-subtitle {
     margin-top: 50px;
     padding: -20px;
-    font-size: 2.2rem;
-    line-height: 1.1;
+    margin-left: 5px;
+    font-size: 1.5rem;
+    line-height: 1.3;
     text-align: center;
   }
 }
@@ -335,6 +336,29 @@ blockquote {
   font-size: 1.4rem;
   font-weight: normal;
 }
+
+@media screen and (max-width: 767px) {
+  .tm-section-title {
+    color: #06427a8f;
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+  .tm-soussection-title {
+    padding-top: 5px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.7;
+  }
+  .img-fluid {
+    display: none;
+}
+  .tm-intro-text {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+}
+
+
 
 .tm-intro-text {
   font-size: 1.2rem;
@@ -445,7 +469,6 @@ blockquote {
   font-size: 18px;
 }
 
-/* Pour les écrans jusqu'à 767px de large (téléphones et tablettes) */
 @media screen and (max-width: 767px) {
   .tm-forwhat-item {
     flex: 0 0 auto;
@@ -459,7 +482,6 @@ blockquote {
   }
 }
 
-/* Pour les écrans de 768px de large (ordinateurs) et plus grands */
 @media screen and (min-width: 768px) {
   /* Masquer les dots sur les écrans plus larges */
   .slick-dots {
@@ -540,8 +562,6 @@ blockquote {
   height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
