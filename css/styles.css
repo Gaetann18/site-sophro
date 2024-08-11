@@ -159,15 +159,14 @@ blockquote {
 
 #home {
 	background-color: #ffffff;
-  background-image: url(../img/backgroud.jpg);
+  background-image: url(../img/backgroud2.png);
   background-repeat: no-repeat;
   opacity: 1000%;
   height: 100vh;
   min-height: 375px;
   position: relative;
-
+  
 }
-
 @media screen and (max-width: 1000px) {
   #home::before {
     content: "";
@@ -218,6 +217,7 @@ blockquote {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: flex-start; 
 }
 
 .tm-hero-text-container-inner {
@@ -250,13 +250,16 @@ blockquote {
   font-size: 2rem;
   color:   #06427a8f;
   text-shadow: 1px 1px 10px #ffffff;
-  text-align: center;
-  padding: 30px;
+  text-align: left;
+  padding: 5px;
   margin: 0 auto; 
-  max-width: 1500px; 
-  text-align: center;
+  max-width: 1000px; 
+  text-align: left;
   z-index: 2;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  padding-left: 5%;
+  padding-top: 20%;
 }
 
 @media (max-width: 768px) {
