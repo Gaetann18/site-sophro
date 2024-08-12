@@ -7,6 +7,10 @@
   font-family: 'bird';
   src: url('../fontawesome-5.5/webfonts/birds.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Tempus';
+  src: url('../fontawesome-5.5/webfonts/TRTempusSansITC.ttf') format('truetype');
+}
 
 
 body {
@@ -163,7 +167,6 @@ blockquote {
   background-repeat: no-repeat;
   opacity: 1000%;
   height: 100vh;
-  min-height: 375px;
   position: relative;
   
 }
@@ -217,7 +220,6 @@ blockquote {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: flex-start; 
 }
 
 .tm-hero-text-container-inner {
@@ -245,21 +247,19 @@ blockquote {
 }
 .tm-hero-subtitle {
   position: relative;
-  font-family: "bird";
+  font-family: "Tempus";
   font-weight: bold;
   font-size: 3rem;
   color:   #000000;
   text-shadow: 1px 1px 10px #ffffff;
-  text-align: left;
   padding: 5px;
   margin: 0 auto; 
-  max-width: 1000px; 
-  text-align: center;
+  text-align: left;
   z-index: 2;
   letter-spacing: 1px;
-  line-height: 1.4;
-  padding-left: 30%;
-  padding-top: 20%;
+  line-height: 1;
+  padding-left: 5%;
+  padding-top: 5%;
 }
 
 @media (max-width: 768px) {
