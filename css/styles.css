@@ -87,7 +87,7 @@ blockquote {
 
 .tm-navbar {
   position: fixed;
-  width: 100%;
+  width: 75%;
   z-index: 1000;
   background-color: transparent;
   transition: all 0.3s ease;
@@ -99,8 +99,8 @@ blockquote {
 }
 
 .navbar-brand {
-  font-family: "Allura", cursive;
-  color: #38B;
+  font-family: "Tempus", cursive;
+  color: rgb(0, 0, 0);
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -119,8 +119,8 @@ blockquote {
 }
 
 .tm-nav-link {
-  font-family: "Allura", cursive;
-  color: rgb(0, 3, 155);
+  font-family: "Tempus", cursive;
+  color: rgb(0, 0, 0);
 }
 
 .tm-navbar.scroll .tm-nav-link {
