@@ -261,6 +261,11 @@ blockquote {
   padding-left: 5%;
   padding-top: 5%;
 }
+.tm-specialization {
+  font-size: 1.5rem;
+  font-weight: normal; 
+  letter-spacing: normal;
+}
 
 @media (max-width: 768px) {
   .tm-hero-subtitle {
