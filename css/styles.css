@@ -247,18 +247,18 @@ blockquote {
   position: relative;
   font-family: "bird";
   font-weight: bold;
-  font-size: 2rem;
-  color:   #06427a8f;
+  font-size: 3rem;
+  color:   #000000;
   text-shadow: 1px 1px 10px #ffffff;
   text-align: left;
   padding: 5px;
   margin: 0 auto; 
   max-width: 1000px; 
-  text-align: left;
+  text-align: center;
   z-index: 2;
   letter-spacing: 1px;
   line-height: 1.4;
-  padding-left: 5%;
+  padding-left: 30%;
   padding-top: 20%;
 }
 
