@@ -84,7 +84,7 @@ blockquote {
 }
 
 /* Navbar */
-
+/* Navbar */
 .tm-navbar {
   position: fixed;
   top: 5%; 
@@ -96,7 +96,7 @@ blockquote {
   transition: all 0.3s ease;
   display: flex;
   justify-content: center; 
-  align-items: center; 
+  align-items: center;
 }
 
 .tm-navbar.scroll {
@@ -109,61 +109,44 @@ blockquote {
   color: rgb(0, 0, 0);
   font-size: 2.5rem;
   font-weight: bold;
-}
-
-.navbar-brand:hover,
-.tm-navbar.scroll .navbar-brand:hover {
-  color: #38B;
-}
-
-.tm-navbar.scroll .navbar-brand {
-  color: #38B;
+  white-space: nowrap; 
 }
 
 .nav-item {
   list-style: none;
+  margin-left: 10px; 
 }
 
 .tm-nav-link {
   font-family: "Tempus", cursive;
   color: rgb(0, 0, 0);
+  white-space: nowrap; 
 }
 
-.tm-navbar.scroll .tm-nav-link {
-  color: #06427a8f;
-}
-
-.tm-navbar.scroll .tm-nav-link:hover,
-.tm-navbar.scroll .tm-nav-link.current,
-.tm-nav-link:hover {
-  color: #0644a1;
-  background-color: rgba(23, 165, 201, 0.39);;
-}
-
-.navbar-toggler {
-  border: 1px solid white;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.navbar-toggler-icon {
-  color: white;
-  padding-top: 6px;
-}
-
-.tm-navbar.scroll .navbar-toggler {
-  border: 1px solid #707070;
-}
-
-.tm-navbar.scroll .navbar-toggler-icon {
-  color: #707070;
+@media screen and (max-width: 1200px) {
+  .navbar-brand {
+    font-size: 2rem; 
+  }
+  
+  .tm-nav-link {
+    font-size: 1.2rem; 
+  }
 }
 
 @media screen and (max-width: 767px) {
   .navbar-brand {
-    font-size: 1.3rem;
+    font-size: 1.3rem; 
+  }
+
+  .tm-nav-link {
+    font-size: 1rem;
+  }
+
+  .tm-navbar {
+    flex-direction: column; /
   }
 }
+
 
 /* Hero */
 
