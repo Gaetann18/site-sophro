@@ -87,10 +87,16 @@ blockquote {
 
 .tm-navbar {
   position: fixed;
-  width: 75%;
+  top: 5%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: auto; 
   z-index: 1000;
   background-color: transparent;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .tm-navbar.scroll {
@@ -124,7 +130,7 @@ blockquote {
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: rgb(12, 15, 187);
+  color: #06427a8f;
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
