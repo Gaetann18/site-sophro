@@ -29,7 +29,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: rgb(7, 0, 105);
+  color: #070069;
 }
 
 a:focus {
@@ -137,7 +137,7 @@ blockquote {
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: #06427a8f;
+  color: rgba(6, 66, 122, 0.561);
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
