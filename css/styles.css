@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:100,300,400,500,700,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
@@ -83,27 +83,32 @@ blockquote {
   background-color: #38B;
 }
 
-/* Navbar */
+/* ========================================
+   NAVIGATION
+   ======================================== */
 
 .tm-navbar {
   position: fixed;
-  top: 0%; 
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  width: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  padding: 0 40px;
-  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px clamp(20px, 5vw, 40px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .tm-navbar.scroll {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.98);
   border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-brand {
@@ -170,62 +175,104 @@ blockquote {
   color: #707070;
 }
 
-/* Pour les grands écrans (PC et tablettes en mode paysage) */
+/* Desktop Navigation */
 @media (min-width: 769px) {
   .navbar-toggler {
-    display: none; /* Cacher le bouton hamburger sur les grands écrans */
+    display: none;
   }
 
   .navbar-collapse {
-    display: flex; /* Afficher le menu classique */
-    justify-content: flex-start; /* Aligner les éléments du menu à gauche */
+    display: flex !important;
+    justify-content: center;
   }
 
   .navbar-nav {
     display: flex;
     margin: 0;
+    gap: clamp(10px, 2vw, 20px);
   }
 
   .navbar-collapse .nav-link {
     color: #707070;
-    padding-right: 20px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-collapse .nav-link:hover {
+    background-color: rgba(56, 187, 255, 0.1);
+    transform: translateY(-2px);
   }
 }
 
-/* Affichage du bouton hamburger sur tablettes et petits écrans */
+/* Mobile Navigation */
 @media (max-width: 768px) {
+  .tm-navbar {
+    padding: 10px 20px;
+  }
+  
   .navbar-toggler {
-    display: block; /* Afficher le bouton hamburger */
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #38B;
+    border-radius: 5px;
+    padding: 8px;
   }
 
   .navbar-collapse {
-    display: none; /* Cacher le menu classique */
+    display: none;
   }
 
-  /* Afficher le menu lorsque le bouton hamburger est cliqué */
   .navbar-collapse.show {
     display: block;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     right: 0;
     width: 100%;
-    border-radius: 3px;
-    padding: 10px;
-    box-sizing: border-box;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .navbar-collapse .nav-link {
     color: #707070;
-    padding: 10px;
-    font-size: 1.1rem; /* Ajuster la taille des liens */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-collapse .nav-link:hover {
+    background-color: rgba(56, 187, 255, 0.1);
+    padding-left: 30px;
   }
 
   .navbar-nav {
-    display: block; /* S'assurer que les liens s'affichent sous forme de liste */
+    display: block;
     width: 100%;
-    text-align: center; /* Centrer les éléments */
+    text-align: left;
+  }
+  
+  .nav-item:last-child .nav-link {
+    border-bottom: none;
   }
 }
 
@@ -233,13 +280,19 @@ blockquote {
 /* Hero */
 
 #home {
-	background-color: #ffffff;
+  background-color: #ffffff;
   background-image: url(../img/backgroud2.png);
   background-repeat: no-repeat;
-  opacity: 1000%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
   height: 100vh;
+  min-height: 600px;
   position: relative;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 1000px) {
   #home::before {
@@ -300,47 +353,52 @@ blockquote {
 
 .tm-hero-title {
   font-family: "Allura", cursive;
-  font-size: 4rem;
-  text-shadow: 2px 2px 2px #333;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .tm-hero-title {
-    padding: -10px;
-    font-size: 2rem; 
-    opacity: 0%;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    opacity: 1;
+    padding: 10px;
   }
 }
 .tm-hero-subtitle {
   position: relative;
-  font-family: "Tempus";
+  font-family: "Tempus", sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
-  color:   #000000;
-  text-shadow: 1px 1px 10px #ffffff;
-  padding: 5px;
-  margin: 0 auto; 
-  text-align: left;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #000000;
+  text-shadow: 1px 1px 10px rgba(255,255,255,0.8);
+  padding: clamp(20px, 5vw, 5%);
+  margin: 0 auto;
+  text-align: center;
   z-index: 2;
   letter-spacing: 1px;
-  line-height: 1;
-  padding-left: 5%;
-  padding-top: 5%;
+  line-height: 1.2;
 }
+
+.tm-profession {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  display: block;
+  margin: 0.5rem 0;
+}
+
 .tm-specialization {
-  font-size: 1.5rem;
-  font-weight: normal; 
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: normal;
   letter-spacing: normal;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
   .tm-hero-subtitle {
-    margin-top: 50px;
-    padding: -20px;
-    margin-left: 5px;
-    font-size: 1.5rem;
+    padding: 30px 20px;
     line-height: 1.3;
-    text-align: center;
   }
 }
 
@@ -405,10 +463,12 @@ blockquote {
   color: #06427a8f;
   font-size: 2.6rem;
   font-weight: normal;
+  font-family: "Tempus", sans-serif;
 }
 .tm-soussection-title {
   font-size: 1.4rem;
   font-weight: normal;
+  font-family: "Tempus", sans-serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -416,19 +476,35 @@ blockquote {
     color: #06427a8f;
     font-size: 2.4rem;
     font-weight: normal;
+    font-family: "Tempus", sans-serif;
   }
   .tm-soussection-title {
     padding-top: 5px;
     font-size: 1.3rem;
     font-weight: normal;
     line-height: 1.7;
+    font-family: "Tempus", sans-serif;
   }
   .img-fluid {
     display: none;
-}
+  }
   .tm-intro-text {
     padding-left: 10px;
     padding-right: 20px;
+  }
+
+  #forwhat {
+    min-height: 120vh;
+    padding: 100px 0 150px;
+  }
+  
+  .tm-forwhat-carousel {
+    padding-bottom: 120px;
+  }
+  
+  .slick-dots {
+    bottom: -100px;
+    margin-top: 80px;
   }
 }
 
@@ -468,10 +544,12 @@ blockquote {
   color: rgb(255, 255, 255);
   background-image: url(../img/forwhat-background.jpg);
   background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: 100%; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
   position: relative;
-  
+  padding: clamp(80px, 12vw, 120px) 0;
+  min-height: 100vh;
 }
 
 #forwhat::before {
@@ -501,10 +579,11 @@ blockquote {
 }
 
 .tm-forwhat-carousel {
-  margin: 0 auto; 
-    display: flex;
+  margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 100px;
 }
 
 .tm-forwhat-item {
@@ -539,7 +618,9 @@ blockquote {
   opacity: 1;
 }
 .slick-dots {
-  bottom: -65px;
+  bottom: -80px;
+  position: relative;
+  margin-top: 60px;
 }
 
 .slick-dots li {
@@ -604,8 +685,40 @@ blockquote {
 }
 
 .tm-gallery-item {
-  max-width: calc(16.666% - 20px);
-  margin: 0 15px;
+  max-width: calc(20% - 20px);
+  margin: 0 10px 30px;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.tm-gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Responsive gallery */
+@media (max-width: 1200px) {
+  .tm-gallery-item {
+    max-width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .tm-gallery-item {
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-gallery-item {
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-gallery-item {
+    max-width: calc(100% - 20px);
+    margin: 0 10px 20px;
+  }
 }
 
 
@@ -753,15 +866,19 @@ figure.effect-honey:hover h2 i {
 #contact {
   color: white;
   position: relative;
-  background: url('../img/footer_background.jpg') fixed;
+  background: url('../img/footer_background.jpg') scroll;
   background-size: cover;
   background-position: center;
-  background-color: hwb(346 60% 10%);
+  background-color: rgba(220, 180, 180, 0.9);
   background-repeat: no-repeat;
-  min-height: 980px;
-  position: relative;
-  padding-bottom: 50px;
-  padding-top: 100px;
+  min-height: 100vh;
+  padding: clamp(60px, 10vw, 100px) 0 50px;
+  
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    min-height: 80vh;
+    background-attachment: scroll;
+  }
 }
 
 .overlay {
@@ -795,21 +912,46 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-input {
-	margin: 0 0 20px 0;
-	width: 90%;
-  padding: 8px 20px;
-  border-radius: 6px;
-  border: 1px solid white;
-  background: transparent;
+  margin: 0 0 20px 0;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
   color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.tm-input:focus {
+  border-color: #38B;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  transform: translateY(-2px);
 }
 
 .tm-btn-submit {
-	font-size: 0.9em;
-	color: #fff;
-	background-color: #38B;
-	width: 50%;
-	margin-bottom: 60px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #38B;
+  background: linear-gradient(135deg, #38B, #4fa8d8);
+  width: 100%;
+  max-width: 200px;
+  margin: 20px 0 60px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 187, 255, 0.3);
+}
+
+.tm-btn-submit:hover {
+  background: linear-gradient(135deg, #4fa8d8, #38B);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(56, 187, 255, 0.4);
 }
 
 .tm-btn-submit:hover {
@@ -1014,84 +1156,284 @@ p {
 .slick-next {
     right: 60px; /* Positionné à droite */
 }
-/* Additional Responsive Enhancements */
+/* ========================================
+   ACCESSIBILITY & UTILITIES
+   ======================================== */
+   
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 
-/* Global Container Adjustments */
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #38B;
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #38B;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* ========================================
+   RESPONSIVE GRID & LAYOUT IMPROVEMENTS
+   ======================================== */
+
+/* Flexible container system */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 clamp(15px, 4vw, 30px);
 }
 
-/* Grid system for general layouts */
+/* Improved responsive grid */
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin: 0 -15px;
+  gap: 0;
 }
 
 .col {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   flex: 1 0 0%;
+  min-width: 0;
 }
 
-/* Responsive Text Adjustments */
-h1, h2, h3, h4, h5, h6, p {
-  line-height: 1.5;
+/* Responsive typography scale */
+h1, .tm-hero-subtitle {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  font-family: "Tempus", sans-serif;
 }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
+h2, .tm-section-title {
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  line-height: 1.3;
+  font-family: "Tempus", sans-serif;
+}
+
+h3, .tm-soussection-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  line-height: 1.4;
+  font-family: "Tempus", sans-serif;
+}
+
+p, .tm-intro-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Hardware acceleration for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.tm-parallax,
+.tm-parallax-2 {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimize transitions */
+* {
+  box-sizing: border-box;
+}
+
+a,
+button,
+.btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhanced smooth scrolling */
+body {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-  .navbar-brand, .tm-nav-link {
-    font-size: 1.5rem;
+/* ========================================
+   ENHANCED RESPONSIVE DESIGN
+   ======================================== */
+
+/* Mobile-first responsive breakpoints */
+@media screen and (max-width: 480px) {
+  .tm-hero-subtitle {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .tm-navbar {
+    padding: 10px 20px;
+  }
+  
+  .tm-gallery-item {
+    margin: 10px 0;
+  }
+  
+  .contact-item {
+    margin: 20px 10px;
+  }
+  
+  #forwhat {
+    min-height: 140vh;
+    padding: 80px 0 180px;
+  }
+  
+  .tm-forwhat-carousel {
+    padding-bottom: 140px;
+  }
+  
+  .slick-dots {
+    bottom: -120px;
+    margin-top: 100px;
+  }
+  
+  .tm-forwhat-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 280px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
+  .tm-forwhat-item img {
+    width: 250px;
+    height: 250px;
   }
-
-  .navbar-collapse {
+  
+  .tm-section-pad-top {
+    padding-top: 60px;
+  }
+  
+  #accparents .row {
     flex-direction: column;
   }
-
-  .tm-hero-title {
-    font-size: 1.8rem;
+  
+  #accparents .col-md-4,
+  #accparents .col-md-8 {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
+  .navbar-brand,
+  .tm-nav-link {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .container {
-    padding: 0 10px;
-  }
-
-  .tm-hero-title {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .tm-intro-text {
-    font-size: 1rem;
+    max-width: 1140px;
   }
 }
 
-/* Utility classes for spacing */
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Spacing utilities */
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
 .mb-1 { margin-bottom: 0.25rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Display utilities */
+.d-block { display: block; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-none { display: none; }
+
+/* Flex utilities */
+.justify-content-center { justify-content: center; }
+.align-items-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+   
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  .tm-navbar,
+  .tm-footer,
+  .slick-dots {
+    display: none;
+  }
+  
+  .container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
